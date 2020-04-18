@@ -8,8 +8,10 @@ using TSQL.Tokens;
 
 namespace TSQL
 {
-	internal interface ITSQLTokenizer : IEnumerator, IEnumerable, IEnumerator<TSQLToken>, IEnumerable<TSQLToken>
+	public interface ITSQLTokenizer : IEnumerator, IEnumerable, IEnumerator<TSQLToken>, IEnumerable<TSQLToken>
 	{
 		void Putback();
+		bool UseQuotedIdentifiers { get; set; }
+		bool IncludeWhitespace {get; set; }
 	}
 }

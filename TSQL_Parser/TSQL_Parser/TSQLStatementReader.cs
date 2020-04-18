@@ -12,7 +12,7 @@ namespace TSQL
 {
 	public partial class TSQLStatementReader
 	{
-		private TSQLTokenizer _tokenizer = null;
+		private ITSQLTokenizer _tokenizer = null;
 		private bool _hasMore = true;
 		private TSQLStatement _current = null;
 
@@ -24,9 +24,16 @@ namespace TSQL
 		}
 
 		public TSQLStatementReader(
-			TextReader tsqlStream)
+			TextReader tsqlStream) :
+				this(new TSQLTokenizer(tsqlStream))
 		{
-			_tokenizer = new TSQLTokenizer(tsqlStream);
+
+		}
+
+		public TSQLStatementReader(
+			ITSQLTokenizer tokenizer)
+		{
+			_tokenizer = tokenizer;
 		}
 
 		public bool UseQuotedIdentifiers
