@@ -1,12 +1,11 @@
 ﻿<?xml version="1.0"?>
 <package>
 	<metadata>
-		<id>TSQL.Parser-internal</id>
+		<id>TSQL.Parser.internal</id>
 		<version>1.5.0</version>
 		<title>TSQL.Parser</title>
 		<authors>Bruce Dunwiddie</authors>
 		<owners>shriop</owners>
-		<license type="expression">Apache-2.0</license>
 		<projectUrl>https://github.com/bruce-dunwiddie/tsql-parser</projectUrl>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
 		<description>Library for Parsing SQL Server T-SQL Scripts</description>
